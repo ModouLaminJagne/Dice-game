@@ -40,6 +40,7 @@ const switchPlayer = function () {
 	currentScore = 0;
 	player0El.classList.toggle('player--active');
 	player1El.classList.toggle('player--active');
+	// document.querySelector(`.player--${activePlayer}`).classList.remove('on--1');
 };
 
 // Rolling dice funtionality
@@ -88,7 +89,7 @@ btnHold.addEventListener('click', function () {
 			document
 				.querySelector(`.player--${activePlayer}`)
 				.classList.remove('player--active');
-		} else { 
+		} else {
 			// Switch to next player
 			switchPlayer();
 		}
